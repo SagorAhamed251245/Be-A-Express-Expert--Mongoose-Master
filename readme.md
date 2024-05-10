@@ -23,13 +23,13 @@
 </div>
 #### expemle
 
-| Name |           Syntax            |            Example             |
-| :--- | :-------------------------: | :----------------------------: |
-| $eq  | "{ field: { $eq: value } }" | find({ gender:{$eq: "Male" }}) |
-| $gt  |              s              |               s                |
-| $gte |              s              |               s                |
-| $in  |              s              |               s                |
-| $lt  |              s              |               s                |
-| $lte |              s              |               s                |
-| $ne  |              s              |               s                |
-| $nin |              s              |               s                |
+| Name |                    Syntax                     |         Example         |           Output            |
+| :--- | :-------------------------------------------: | :---------------------: | :-------------------------: |
+| $eq  |        { field: { $eq: value } } equal        | find({ age:{$eq: 18 }}) |        { "age" : 18}        |
+| $gt  |   { field: { $eq: value } }geterthen equal    |            s            |
+| $gte | { field: { $eq: value } } geterthen and equal |            s            |
+| $in  |                       s                       |            s            |
+| $lt  |                       s                       |            s            |
+| $lte |                       s                       |            s            |
+| $ne  |      { field: { $ne: value } } not equal      | find({ age:{$ne: 18 }}) | { "age" : 19}, {"age" : 20} |
+| $nin |                       s                       |            s            |
