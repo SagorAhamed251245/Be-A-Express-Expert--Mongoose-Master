@@ -23,6 +23,7 @@
 |      |                                                                     |
 
 </div>
+
 #### Example of Implicit operators
 
 | Name |                     Syntax                     |             Example              |            Output            |
@@ -68,6 +69,31 @@
 
 #### Example of Explicit operator
 
-| Name |             Syntax              |         Example         |    Output     |
-| :--- | :-----------------------------: | :---------------------: | :-----------: |
-| $eq  | { field: { $eq: value } } equal | find({ age:{$eq: 18 }}) | { "age" : 18} |
+| Name |                       Syntax                       |                              Example                               |
+| :--- | :------------------------------------------------: | :----------------------------------------------------------------: |
+| $and | { $and: [ { <expression1> }, { <expression2> }...} |     ({ $and: [{ age: { $lt: 30, } }, { age: { $gte: 18 } }] }      |
+| $or  | { $or: [ { <expression1> }, { <expression2> }...}  | ({ $or: [{ interests: "Cooking" }, { interests: "Travelling" }] }) |
+| $not |   { field: { $not: { <operator-expression> } } }   |               ( { price: { $not: { $gt: 1.99 } } } )               |
+| $nor |        { $nor: [ { <expression1> }, ... ] }        |         ( { $nor: [ { price: 1.99 }, { sale: true } ] } )          |
+
+## Element Query Operators
+
+#### https://www.mongodb.com/docs/manual/reference/operator/query-element/#element-query-operators
+
+#### Element operators
+
+<div align="center">
+
+| Name    |                      Description                       |
+| :------ | :----------------------------------------------------: |
+| $exists |    Matches documents that have the specified field.    |
+| $type   | Selects documents if a field is of the specified type. |
+
+</div
+
+#### Example of Element operator
+
+| Name    |                           Syntax                           |          Example           |
+| :------ | :--------------------------------------------------------: | :------------------------: |
+| $exists |             { field: { $exists: <boolean> } }              | ({phone: {$exists: true}}) |
+| $type   | { field: { $type: [ <BSON type1> , <BSON type2>, ... ] } } | ({age: {$type: "string}})  |
