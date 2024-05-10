@@ -69,6 +69,8 @@
 
 #### Example of Explicit operator
 
+<div align="center">
+
 | Name |                       Syntax                       |                              Example                               |
 | :--- | :------------------------------------------------: | :----------------------------------------------------------------: |
 | $and | { $and: [ { <expression1> }, { <expression2> }...} |     ({ $and: [{ age: { $lt: 30, } }, { age: { $gte: 18 } }] }      |
@@ -76,6 +78,7 @@
 | $not |   { field: { $not: { <operator-expression> } } }   |               ( { price: { $not: { $gt: 1.99 } } } )               |
 | $nor |        { $nor: [ { <expression1> }, ... ] }        |         ( { $nor: [ { price: 1.99 }, { sale: true } ] } )          |
 
+</div>
 ## Element Query Operators
 
 #### https://www.mongodb.com/docs/manual/reference/operator/query-element/#element-query-operators
@@ -93,7 +96,11 @@
 
 #### Example of Element operator
 
+<div align="center">
+
 | Name    |                           Syntax                           |          Example           |
 | :------ | :--------------------------------------------------------: | :------------------------: |
 | $exists |             { field: { $exists: <boolean> } }              | ({phone: {$exists: true}}) |
 | $type   | { field: { $type: [ <BSON type1> , <BSON type2>, ... ] } } | ({age: {$type: "string}})  |
+
+</div
