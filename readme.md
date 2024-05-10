@@ -6,7 +6,8 @@
 
 ## Comparison Query Operators
 
-<center>
+<div align="center">
+
 | Name |                             Description                             |
 | :--- | :-----------------------------------------------------------------: |
 | $eq  |         Matches values that are equal to a specified value.         |
@@ -19,4 +20,4 @@
 | $nin |          Matches none of the values specified in an array.          |
 |      |
 
-</center>
+</div>
