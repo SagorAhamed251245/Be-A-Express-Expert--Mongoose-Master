@@ -26,6 +26,8 @@
 
 #### Example of Implicit operators
 
+<div align="center">
+
 | Name |                     Syntax                     |             Example              |            Output            |
 | :--- | :--------------------------------------------: | :------------------------------: | :--------------------------: |
 | $eq  |        { field: { $eq: value } } equal         |     find({ age:{$eq: 18 }})      |        { "age" : 18}         |
@@ -37,18 +39,28 @@
 | $ne  |      { field: { $ne: value } } not equal       |     find({ age:{$ne: 18 }})      | { "age" : 19}, {"age" : 20}  |
 | $nin | { field: { $nin: [<value1>, ... <valueN> ] } } | find({ age:{$nin: [18,..,30]}}}) | { "age" : 11}, {"age" : 50}  |
 
+</div>
+
+<div align="center">
+
 |    implicit and     |                       Example                        |               Output               |
 | :-----------------: | :--------------------------------------------------: | :--------------------------------: |
 | geterthen less then |         find({ age: { $lt: 30 , $gt: 18} })          |    { "age" : 19}, {"age" : 29}     |
 | with another field  | find({gender: "Female" ,age: { $lt: 30 , $gt: 18} }) | { "gender" : "Female","age" : 18 } |
 
+</div>
+
 ####
+
+<div align="center">
 
 |    implicit and     |                       Example                        |               Output               |
 | :-----------------: | :--------------------------------------------------: | :--------------------------------: |
 | geterthen less then |         find({ age: { $lt: 30 , $gt: 18} })          |    { "age" : 19}, {"age" : 29}     |
 | with another field  | find({gender: "Female" ,age: { $lt: 30 , $gt: 18} }) | { "gender" : "Female","age" : 18 } |
 |                     |
+
+</div>
 
 ## Logical Query Operators
 
@@ -79,6 +91,7 @@
 | $nor |        { $nor: [ { <expression1> }, ... ] }        |         ( { $nor: [ { price: 1.99 }, { sale: true } ] } )          |
 
 </div>
+
 ## Element Query Operators
 
 #### https://www.mongodb.com/docs/manual/reference/operator/query-element/#element-query-operators
