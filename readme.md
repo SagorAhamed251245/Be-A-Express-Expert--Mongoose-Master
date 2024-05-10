@@ -21,15 +21,15 @@
 |      |                                                                     |
 
 </div>
-<div align="center">
+#### expemle
+
 | Name |            Syntax             |            Example             |
 | :--- | :---------------------------: | :----------------------------: |
 | $eq  | { <field>: { $eq: <value> } } | find({ gender:{$eq: "Male" }}) |
-| $gt  |                               |               s                |
-| $gte |                               |               s                |
-| $in  |                               |               s                |
-| $lt  |                               |               s                |
-| $lte |                               |               s                |
-| $ne  |                               |               s                |
-| $nin |                               |               s                |
-</div>
+| $gt  |               s               |               s                |
+| $gte |               s               |               s                |
+| $in  |               s               |               s                |
+| $lt  |               s               |               s                |
+| $lte |               s               |               s                |
+| $ne  |               s               |               s                |
+| $nin |               s               |               s                |
