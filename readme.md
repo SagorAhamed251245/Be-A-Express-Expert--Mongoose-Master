@@ -1,10 +1,12 @@
 ---
 
-/\* mongodb oparetor
+# mongodb operators
 
 #### https://www.mongodb.com/docs/manual/reference/operator/query-comparison/
 
 ## Comparison Query Operators
+
+### Implicit Operators
 
 <div align="center">
 
@@ -21,7 +23,7 @@
 |      |                                                                     |
 
 </div>
-#### expemle
+#### Example of Implicit operators
 
 | Name |                     Syntax                     |             Example              |            Output            |
 | :--- | :--------------------------------------------: | :------------------------------: | :--------------------------: |
@@ -38,4 +40,34 @@
 | :-----------------: | :--------------------------------------------------: | :--------------------------------: |
 | geterthen less then |         find({ age: { $lt: 30 , $gt: 18} })          |    { "age" : 19}, {"age" : 29}     |
 | with another field  | find({gender: "Female" ,age: { $lt: 30 , $gt: 18} }) | { "gender" : "Female","age" : 18 } |
+
+####
+
+|    implicit and     |                       Example                        |               Output               |
+| :-----------------: | :--------------------------------------------------: | :--------------------------------: |
+| geterthen less then |         find({ age: { $lt: 30 , $gt: 18} })          |    { "age" : 19}, {"age" : 29}     |
+| with another field  | find({gender: "Female" ,age: { $lt: 30 , $gt: 18} }) | { "gender" : "Female","age" : 18 } |
 |                     |
+
+## Logical Query Operators
+
+#### https://www.mongodb.com/docs/manual/reference/operator/query-logical/#logical-query-operators
+
+#### Explicit operators
+
+<div align="center">
+
+| Name |                                               Description                                               |
+| :--- | :-----------------------------------------------------------------------------------------------------: |
+| $and | Joins query clauses with a logical AND returns all documents that match the conditions of both clauses. |
+| $not | Inverts the effect of a query expression and returns documents that do not match the query expression.  |
+| $nor |      Joins query clauses with a logical NOR returns all documents that fail to match both clauses.      |
+| $or  | Joins query clauses with a logical OR returns all documents that match the conditions of either clause. |
+
+</div
+
+#### Example of Explicit operator
+
+| Name |             Syntax              |         Example         |    Output     |
+| :--- | :-----------------------------: | :---------------------: | :-----------: |
+| $eq  | { field: { $eq: value } } equal | find({ age:{$eq: 18 }}) | { "age" : 18} |
