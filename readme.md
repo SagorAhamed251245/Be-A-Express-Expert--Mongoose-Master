@@ -156,21 +156,47 @@
 
 #### https://www.mongodb.com/docs/manual/reference/operator/update-field/#field-update-operators
 
-div align="center">
+<div align="center">
 
 | Name |               Description                |
 | :--- | :--------------------------------------: |
 | $set | Sets the value of a field in a document. |
+| $addToSet | Sets the value of a field in a document. |
 
-</div
+</div>
 
 #### Example of Update Operators operator
 
 <div align="center">
 
 | Name |              Syntax               |                                                                            Example                                                                             |
-| :--- | :-------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| $set | { $set: { field1: value1, ... } } | db.products.updateOne( { \_id: 100 }, { $set: { quantity: 500, details: { model: "2600", make: "Fashionaires" },tags: [ "coats", "outerwear", "clothing" ]} }) |
-| }    |                                   |
+| :--- | :-------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------: | --- | --- |
+| $set | { $set: { field1: value1, ... } } | db.products.updateOne( { \_id: 100 }, { $set: { quantity: 500, details: { model: "2600", make: "Fashionaires" },tags: [ "coats", "outerwear", "clothing" ]} }) | }   | $addToSet    |{ $addToSet: { field1: value1, ... } }|
 
 </div
+
+---
+
+```javascript
+db.products.updateOne(
+  { _id: ObjectId("6406ad63fc13ae5a40000065") },
+  {
+    $addToSet: {
+      tags: "coats",
+    },
+  }
+);
+
+db.products.updateOne(
+  { _id: ObjectId("6406ad63fc13ae5a40000065") },
+  {
+    $set: {
+      quantity: 500,
+      details: { model: "2600", make: "Fashionaires" },
+      tags: ["coats", "outerwear", "clothing"],
+    },
+  }
+);
+```
+
+---
