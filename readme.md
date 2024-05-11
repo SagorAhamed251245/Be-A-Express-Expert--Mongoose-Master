@@ -168,9 +168,6 @@
 
 <div align="center">
 
-| Name |              Syntax               |                                                                            Example                                                                             |
-| :--- | :-------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------: | --- | --- |
-| $set | { $set: { field1: value1, ... } } | db.products.updateOne( { \_id: 100 }, { $set: { quantity: 500, details: { model: "2600", make: "Fashionaires" },tags: [ "coats", "outerwear", "clothing" ]} }) | }   
 
 </div>
 
@@ -178,16 +175,13 @@
 
 ```javascript
 db.products.updateOne(
-    { _id: 100 },
-    {
-        $set:
-        {
-            quantity: 500,
-            details: { model: "2600", make: "Fashionaires" },
-            tags: ["coats", "outerwear", "clothing"]
-        }
-    }
-)
-
----
+  { _id: 100 },
+  {
+    $set: {
+      quantity: 500,
+      details: { model: "2600", make: "Fashionaires" },
+      tags: ["coats", "outerwear", "clothing"],
+    },
+  }
+);
 ```
