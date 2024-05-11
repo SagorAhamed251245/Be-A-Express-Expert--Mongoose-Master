@@ -145,3 +145,32 @@
 | $size      | { field: { $type: [ <BSON type1> , <BSON type2>, ... ] } } |             ({age: {$type: "string}})              |
 
 </div
+
+# updated delete
+
+### Update Operators
+
+#### https://www.mongodb.com/docs/manual/reference/operator/update/#update-operators
+
+### Field Update Operators
+
+#### https://www.mongodb.com/docs/manual/reference/operator/update-field/#field-update-operators
+
+div align="center">
+
+| Name |               Description                |
+| :--- | :--------------------------------------: |
+| $set | Sets the value of a field in a document. |
+
+</div
+
+#### Example of Update Operators operator
+
+<div align="center">
+
+| Name |              Syntax               |                                                                            Example                                                                             |
+| :--- | :-------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| $set | { $set: { field1: value1, ... } } | db.products.updateOne( { \_id: 100 }, { $set: { quantity: 500, details: { model: "2600", make: "Fashionaires" },tags: [ "coats", "outerwear", "clothing" ]} }) |
+| }    |                                   |
+
+</div
