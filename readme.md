@@ -2,7 +2,9 @@
 
 # mongodb operators
 
-#### https://www.mongodb.com/docs/manual/reference/operator/query-comparison/
+#### Practice Data: https://github.com/Apollo-Level2-Web-Dev/mongodb-practice
+
+#### https://www.mongodb.com/docs/manual/reference/operator/query- comparison/
 
 ## Comparison Query Operators
 
@@ -115,5 +117,31 @@
 | :------ | :--------------------------------------------------------: | :------------------------: |
 | $exists |             { field: { $exists: <boolean> } }              | ({phone: {$exists: true}}) |
 | $type   | { field: { $type: [ <BSON type1> , <BSON type2>, ... ] } } | ({age: {$type: "string}})  |
+
+</div
+
+## Array Query Operators
+
+#### https://www.mongodb.com/docs/manual/reference/operator/query-array/#array-query-operators
+
+<div align="center">
+
+| Name       |                                           Description                                            |
+| :--------- | :----------------------------------------------------------------------------------------------: |
+| $all       |                 Matches arrays that contain all elements specified in the query.                 |
+| $elemMatch | Selects documents if element in the array field matches all the specified $elemMatch conditions. |
+| $size      |                    Selects documents if the array field is a specified size.                     |
+
+</div
+
+#### Example of Element operator
+
+<div align="center">
+
+| Name       |                           Syntax                           |                      Example                       |
+| :--------- | :--------------------------------------------------------: | :------------------------------------------------: |
+| $all       |        { field: { $all: [value1 , value2 ... ] } }         |     { tags: { $all: [ "ssl" , "security" ] } }     |
+| $elemMatch |     { field: { $elemMatch: { query1, query2, ... } } }     | { results: { $elemMatch: { $gte: 80, $lt: 85 } } } |
+| $size      | { field: { $type: [ <BSON type1> , <BSON type2>, ... ] } } |             ({age: {$type: "string}})              |
 
 </div
