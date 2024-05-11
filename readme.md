@@ -168,4 +168,19 @@
 
 <div align="center">
 
+---
+
+```javascript
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $set: {
+      quantity: 500,
+      details: { model: "2600", make: "Fashionaires" },
+      tags: ["coats", "outerwear", "clothing"],
+    },
+  }
+);
+```
+
 </div>
