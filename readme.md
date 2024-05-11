@@ -85,12 +85,12 @@
 
 <div align="center">
 
-| Name |                       Syntax                       |                              Example                               |
-| :--- | :------------------------------------------------: | :----------------------------------------------------------------: |
+| Name |                      Syntax                      |                              Example                               |
+| :--- | :----------------------------------------------: | :----------------------------------------------------------------: |
 | $and | { $and: [ { expression1> }, { expression2> }...} |     ({ $and: [{ age: { $lt: 30, } }, { age: { $gte: 18 } }] }      |
 | $or  | { $or: [ { expression1> }, { expression2> }...}  | ({ $or: [{ interests: "Cooking" }, { interests: "Travelling" }] }) |
-| $not |   { field: { $not: { operator-expression> } } }   |               ( { price: { $not: { $gt: 1.99 } } } )               |
-| $nor |        { $nor: [ { expression1> }, ... ] }        |         ( { $nor: [ { price: 1.99 }, { sale: true } ] } )          |
+| $not |  { field: { $not: { operator-expression> } } }   |               ( { price: { $not: { $gt: 1.99 } } } )               |
+| $nor |       { $nor: [ { expression1> }, ... ] }        |         ( { $nor: [ { price: 1.99 }, { sale: true } ] } )          |
 
 </div>
 
@@ -113,9 +113,9 @@
 
 <div align="center">
 
-| Name    |                           Syntax                           |          Example           |
-| :------ | :--------------------------------------------------------: | :------------------------: |
-| $exists |             { field: { $exists:boolean> } }              | ({phone: {$exists: true}}) |
+| Name    |                         Syntax                          |          Example           |
+| :------ | :-----------------------------------------------------: | :------------------------: |
+| $exists |             { field: { $exists:boolean> } }             | ({phone: {$exists: true}}) |
 | $type   | { field: { $type: [ BSON type1 , BSON type2>, ... ] } } | ({age: {$type: "string}})  |
 
 </div
@@ -138,10 +138,10 @@
 
 <div align="center">
 
-| Name       |                           Syntax                           |                      Example                       |
-| :--------- | :--------------------------------------------------------: | :------------------------------------------------: |
-| $all       |        { field: { $all: [value1 , value2 ... ] } }         |     { tags: { $all: [ "ssl" , "security" ] } }     |
-| $elemMatch |     { field: { $elemMatch: { query1, query2, ... } } }     | { results: { $elemMatch: { $gte: 80, $lt: 85 } } } |
+| Name       |                          Syntax                          |                      Example                       |
+| :--------- | :------------------------------------------------------: | :------------------------------------------------: |
+| $all       |       { field: { $all: [value1 , value2 ... ] } }        |     { tags: { $all: [ "ssl" , "security" ] } }     |
+| $elemMatch |    { field: { $elemMatch: { query1, query2, ... } } }    | { results: { $elemMatch: { $gte: 80, $lt: 85 } } } |
 | $size      | { field: { $type: [ BSON type1> , BSON type2>, ... ] } } |             ({age: {$type: "string}})              |
 
 </div
@@ -168,20 +168,4 @@
 
 <div align="center">
 
-
 </div>
-
----
-
-```javascript
-db.products.updateOne(
-  { _id: 100 },
-  {
-    $set: {
-      quantity: 500,
-      details: { model: "2600", make: "Fashionaires" },
-      tags: ["coats", "outerwear", "clothing"],
-    },
-  }
-);
-```
