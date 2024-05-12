@@ -144,11 +144,6 @@
 | $elemMatch |    { field: { $elemMatch: { query1, query2, ... } } }    | { results: { $elemMatch: { $gte: 80, $lt: 85 } } } |
 | $size      | { field: { $type: [ BSON type1> , BSON type2>, ... ] } } |             ({age: {$type: "string}})              |
 
-| sssss | ysssss |
-| :---: | :----: |
-|   p   |   q    |
-|   p   |   q    |
-
 </div
 
 # updated delete
