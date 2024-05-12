@@ -165,3 +165,9 @@
 </div
 
 #### Example of Update Operators operator
+
+# Module 6: Mastering MongoDB Aggregation & Indexing
+
+## 6-0 Intro the powerful aggregation framework
+
+<img src="https://prnt.sc/rSMD-eqz6IzU"/>
