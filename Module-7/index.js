@@ -1,0 +1,2 @@
+add();
+console.log(add());
